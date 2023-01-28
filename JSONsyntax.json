@@ -1,0 +1,21 @@
+{
+    "name":"Ibad",
+    "age": 22,
+    "boolean": true,
+    "array": ["banana","apple"],
+    "objects": {"name":"John"},
+    "employees": [
+        {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        {
+            "firstName": "Anna",
+            "lastName": "Smith"
+        },
+        {
+            "firstName": "Peter",
+            "lastName": "Jones"
+        }
+    ]
+}
