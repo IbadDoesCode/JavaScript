@@ -1,11 +1,12 @@
+const emp = [
+    { name:'Mark', age:21, dept:'IT' },
+    { name:'John', age:34, dept:'Marketing' },
+    { name:'Kim', age:27, dept:'Sales' },
+    { name:'Tim', age:23, dept:'IT' }
+]
 
+let empIT = emp.filter(e => e.dept == 'IT')
 
-
-const ages = [32, 33, 16, 40]
-const result = ages.filter(checkAdult)
-
-function checkAdult(ages) {
-    return ages >= 18
+for(let em of empIT) {
+    console.log(em.name)
 }
-
-console.log(result)
