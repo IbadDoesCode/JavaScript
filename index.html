@@ -1,22 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Footer JavaScript</title>
-</head>
-<body>
-  <footer>
-    <p>
-      Copyright &copy;
-      <span id="year"></span> 
-      IbadDoesCode
-    </p>
-  </footer>
-  <script>
-    const year = document.getElementById('year')
-    year.textContent= new Date().getFullYear()
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Navigation</title>
+  </head>
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .navigation{
+        width: 100%;
+        height: 50px;
+        margin: auto;
+        background-color: rgb(0, 78, 147);
+        display: flex;
+    }
+    ul{
+        width: 30%;
+        margin: auto;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        list-style-type: none;
+    }
+    li{
+        margin: auto;
+    }
+    a{
+        color: whitesmoke;
+        text-decoration: none;
+        line-height: 2;
+        font-weight: bold;
+    }
+    .content{
+        width:80%;
+        margin: auto;
+    }
+    h1{
+        line-height: 3;
+    }
+    p{
+        line-height: 1.5;
+        color: rgb(73, 73, 73);
+    }
+  </style>
+  <body>
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>How Sticky Navigation Works</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, laborum
+        quis tempora eaque molestiae iusto mollitia, libero optio ab neque hic,
+        sit quisquam unde architecto quasi totam et similique iure! Natus
+        laudantium, officiis provident perferendis voluptas culpa in facilis
+        earum iusto expedita, numquam, ratione aut minus magni sapiente
+        veritatis aspernatur rerum maiores quis. Reprehenderit officiis itaque
+        error eos, quo maxime? Minima eligendi excepturi unde qui voluptatem
+        quis eum cumque ut officiis sit, delectus numquam nesciunt voluptatum
+        animi id debitis. Optio repellat voluptatem neque ipsa sequi
+        necessitatibus tempore ducimus, deleniti dolorum. Eius necessitatibus
+        pariatur recusandae maxime enim quibusdam! Sunt totam neque ab iusto
+        voluptatibus omnis eligendi natus iste amet consectetur molestiae
+        placeat numquam tenetur alias atque vero eaque, inventore maiores enim.
+        Excepturi natus accusamus hic veniam in quia qui aliquam iusto ipsa eos
+        eum exercitationem consequuntur, reiciendis, autem fuga ipsam iure. Eius
+        quisquam obcaecati delectus impedit corporis doloremque! Magni,
+        accusantium sunt. Perspiciatis placeat quibusdam ut expedita facilis
+        tempore veniam ex pariatur distinctio sapiente molestiae fuga quaerat
+        exercitationem, eius maxime voluptatum odio sunt. Natus porro quos
+        asperiores tempora in doloremque, reprehenderit error. Reprehenderit
+        inventore eveniet repellat natus rem cum tenetur ex deleniti, corrupti
+        distinctio impedit ea assumenda beatae a excepturi odit itaque iusto,
+        sint temporibus molestiae, consequatur at! Quas doloribus fuga
+        voluptatem? Iure architecto labore non vitae vel ratione illum,
+        accusamus deleniti, earum natus laborum error dolorem. Amet cupiditate
+        iusto perferendis debitis nesciunt quia earum quasi, magni nemo, eveniet
+        autem explicabo labore. Dolorem, exercitationem fugit tempora velit
+        corporis, consequuntur id earum vel, consequatur quaerat quasi ratione.
+        Labore saepe dolor reprehenderit quia odit, a cumque ipsam? Asperiores
+        nemo cumque omnis, vel voluptate tempora. Autem maiores nulla tempore
+        nisi qui, dignissimos voluptates sed tenetur consectetur incidunt.
+        Consectetur voluptate consequatur ut tempore iusto rerum? Ullam,
+        voluptates? Corporis voluptate est ipsum! Fugiat, numquam! Ut, ea
+        corrupti? Doloribus est blanditiis sint voluptatibus ipsam. Distinctio
+        exercitationem aliquam, amet nobis pariatur delectus fugit cupiditate,
+        molestias et numquam recusandae maxime aspernatur eveniet quam iure
+        inventore ullam similique facilis voluptate magni? Ab, delectus.
+        Necessitatibus iure eveniet eius recusandae, dolorum eaque sit eos sint,
+        debitis natus voluptatum quibusdam, veritatis pariatur impedit officia
+        soluta enim sequi et quis quasi fugiat ducimus. Quia, neque. Animi
+        nostrum minus obcaecati illo laborum delectus possimus? Velit amet sed
+        eos pariatur totam voluptas tenetur possimus? Sunt autem saepe ullam
+        neque, qui eveniet velit repellendus enim molestias, unde impedit!
+        Perspiciatis iste repudiandae praesentium suscipit ipsum officia
+        architecto corporis velit numquam molestias quae aliquid ut quasi
+        aperiam fuga laboriosam, voluptatibus enim libero, voluptates dolores
+        excepturi repellat ipsa pariatur nam? Consequuntur? Incidunt corrupti
+        eligendi asperiores exercitationem vitae beatae hic quasi iure sed
+        itaque esse velit impedit ratione corporis, aut consequatur porro nihil.
+        Ipsum autem beatae necessitatibus porro ad et veritatis earum! Culpa
+        cupiditate vel deserunt necessitatibus at? Facilis magni harum placeat
+        maiores, amet labore suscipit animi veniam voluptatem commodi accusamus
+        saepe inventore molestias eveniet unde sint ea provident ratione
+        aspernatur obcaecati! Unde hic, sequi vel quidem est mollitia explicabo
+        minima ea quo ad qui a. Quae dolores ratione sed, sapiente,
+        reprehenderit repellendus quas atque tenetur quaerat blanditiis
+        exercitationem maiores quos? Dignissimos. Reprehenderit sunt odio
+        commodi, adipisci veniam magnam deserunt, ad optio tempore a laudantium,
+        doloribus natus? Labore possimus optio reiciendis doloremque natus
+        aliquam reprehenderit laudantium minima ducimus! Totam nam est aliquam!
+        Illum, fugit facere laudantium, eaque quam eligendi nostrum dolore eius
+        impedit saepe est dolorem asperiores explicabo dicta nemo vero
+        doloribus? Recusandae, corporis omnis cumque dolore earum repellendus
+        illum est enim! Dignissimos atque fugiat tempora dolor ea, odit
+        consequuntur nostrum amet quos quam, architecto natus blanditiis.
+        Voluptatibus nulla corrupti suscipit atque nobis inventore, tempore
+        repellendus laboriosam obcaecati iste est minima commodi. Odit pariatur
+        reprehenderit rem molestiae veniam temporibus deleniti, dolor quidem
+        nobis aut sapiente ipsum ducimus error perferendis necessitatibus,
+        perspiciatis doloremque nam ullam architecto corrupti nisi
+        exercitationem quo! Fugiat, eligendi facere! Eaque totam molestias quis
+        ex facilis. Officia quod fuga natus saepe numquam est tempora sed
+        exercitationem dolores voluptatibus. Quae dolore amet voluptate nisi
+        unde error rem ipsa iste impedit dolorem. Officiis, aliquam illo?
+        Tempore, reiciendis unde accusamus aperiam qui debitis possimus, quos
+        pariatur labore officia culpa molestias a necessitatibus commodi autem
+        corporis omnis placeat. Asperiores doloremque a distinctio harum neque!
+      </p>
+    </div>
+    <script>
+    </script>
+  </body>
 </html>

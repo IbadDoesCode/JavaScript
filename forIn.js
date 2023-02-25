@@ -1,6 +1,8 @@
-const brands = [
-    'Apple','Microsoft','Google','Meta'
+
+const items = [
+    "Shirts","Shoes",
+    "Watch","Hoddie"
 ]
-for (const item in brands) {
-    console.log(brands[item])
+for (let item in items) {
+    console.log(items[item])
 }
