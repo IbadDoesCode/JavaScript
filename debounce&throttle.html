@@ -1,0 +1,74 @@
+<!-- debounce ensure that certain 
+    task don't fire too often. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce & Throttle</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 70%;
+        margin: auto;
+        padding-top: 25px;
+    }
+</style>
+<body>
+    <div class="container">
+        <button id="btn">
+            Submit
+        </button>
+    </div>
+
+    <script>
+        // Debounce
+        // const debounce = (fn,delay) => {
+        //     let timeoutID
+        //     return function (...args) {
+        //         if (timeoutID) {
+        //             clearTimeout(timeoutID)
+        //         }
+        //         timeoutID = setTimeout(
+        //             () => {
+        //             fn(...args)
+        //         }, delay)
+        //     }
+        // }
+
+        // document.getElementById('btn')
+        // .addEventListener(
+        //     'click',
+        //     debounce((e) => {
+        //         console.count('Click')
+        //     }, 1000)
+        // )
+
+        // Throttle
+        const throttle = (fn, delay) => {
+            let last = 0
+            return (...args) => {
+                const now = new Date()
+                if (now - last < delay) {
+                    return
+                }
+                last = now
+                return fn(...args)
+            }
+        }
+
+        document.getElementById('btn')
+        .addEventListener(
+            'click',
+            throttle((e) => {
+                console.log("Click")
+            }, 3000)
+        )
+    </script>
+</body>
+</html>
