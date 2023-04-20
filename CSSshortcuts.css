@@ -1,0 +1,17 @@
+/* Don't Do This */
+
+.item {
+    width: 50%;
+    max-width: 200px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Do This Instead */
+
+.item {
+    width: min(50%, 200px);
+
+    margin-inline: 10px;
+}
