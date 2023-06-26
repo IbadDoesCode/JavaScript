@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing With Images JS</title>
 </head>
+<!------------- CSS -------------->
 <style>
-  .container{
-    width: 90%;
-    margin:auto;
-  }
+    .container {
+        width: 50%;
+        margin: auto;
+        padding: 1rem;
+    }
+    .box {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 12px;
+        border: 2px solid #333;
+    }
+    .box .image {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-image: 
+        url("https://wallpapers.com/images/hd/chibi-cute-boy-cartoon-with-cat-ears-hoodie-o8ton4hph5njnxw1.jpg");
+    }
 </style>
 <body>
-  <div class="container">
-    <video src="https://cdn.pixabay.com/vimeo/780232342/pine-142579.mp4?width=1280&expiry=1677926874&hash=fec19fb5bdd459bc1002d023e4939d449c1cdaf6" controls></video>
-    <button id="btn">Full Screen</button>
-    <button id="btnX">Exit</button>
-  </div>
-  <script>
-    let vidBtn = document.getElementById("btn")
-    let closeBtn = document.getElementById("btnX")
-    vidBtn.onclick = () => {
-      vidBtn.requestFullscreen()
-    }
-    closeBtn.onclick = () => {
-      closeBtn.exitFullscreen()
-    }
-  </script>
+    <div class="container">
+        <div class="box">
+            <div class="image" 
+            draggable="true"></div>
+        </div>
+        <div class="box"></div>
+    </div>
+<!-------------- JS ---------------->
+    <script>
+        const boxes = document.
+        querySelectorAll(".box")
+        const image = document.
+        querySelector(".image")
+
+        boxes.forEach((box) => {
+            box.addEventListener(
+                "dragover", (e) => {
+                e.preventDefault()
+            })
+            box.addEventListener(
+                "drop", () => {
+                box.
+                appendChild(image)
+            })
+        })
+    </script>
 </body>
 </html>
