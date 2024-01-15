@@ -1,9 +1,11 @@
+// Format Number as Currency
 
+function formatCurrency(number) {
+  return new Intl.NumberFormat(
+    "en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(number);
+}
 
-const amount = 156723489
-const f = new Intl.NumberFormat('en-us',{
-    currency:"USD",
-    style:"currency"
-})
-
-console.log(f.format(amount))
+console.log(formatCurrency(300))
