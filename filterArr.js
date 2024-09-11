@@ -1,12 +1,13 @@
-const emp = [
-    { name:'Mark', age:21, dept:'IT' },
-    { name:'John', age:34, dept:'Marketing' },
-    { name:'Kim', age:27, dept:'Sales' },
-    { name:'Tim', age:23, dept:'IT' }
-]
+// Don't do filtering an array with filter like this
 
-let empIT = emp.filter(e => e.dept == 'IT')
+let num = [1,2,3,4,5,6,7]
 
-for(let em of empIT) {
-    console.log(em.name)
-}
+// Don't do this
+let evenNum = num.filter(function(num) {
+    return num % 2 === 0
+})
+console.log(evenNum)
+
+// Do this instead
+let evenNumbers = num.filter(num => num % 2 === 0)
+console.log(evenNumbers)

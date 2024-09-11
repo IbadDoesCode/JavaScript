@@ -1,8 +1,6 @@
-// You can update frozen objects
-const creator = {
-    name: 'Ibad',
-    subs: 1000
-}
-console.log(Object.freeze(creator))
-creator.name = 'Kim'
-console.log(Object.freeze(creator))
+// Object freeze method in JS
+
+const obj = { a: 1, b: 2 }
+Object.freeze(obj)
+obj.a = 10
+console.log(obj.a)

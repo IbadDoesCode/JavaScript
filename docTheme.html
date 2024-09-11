@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Setting Dark & Light Mode
+    </p>
+    <div>
+        <select id="theme" onchange="switchTheme()">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        </select>
+    </div>
+    <script>
+        function switchTheme() {
+            const theme = document.getElementById("theme").value
+            document.getElementsByTagName("meta")[2].content = theme
+        }
+    </script>
+</body>
+</html>
